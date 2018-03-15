@@ -1,0 +1,7 @@
+我将作者的项目clone下来之后，重新自己新建项目一步一步走。将作者的api和阿里字体、图片这些直接拿来用。
+1.首先在package.json中已经有axios了，即是说有安装过，然而代码中vue-resource的代码没有相应改为axios的。
+2.随便拿个api来看，比如Home.json。通过axios获取到之后设为res，res即是Home.json中所有内容，然而作者代码中获取到之后无缘无故出现res.body字段，而api中是没有的。通过控制台打印输出res后，发现应改为res.data.内容。
+3.在App.vue中，css需要导入阿里字体的样式。作者这里导错，不应导入font.css，而应该导入iconfont.css。
+4.所有api都需要放置在static目录下。因为static目录是vue-cli向外暴露的静态文件夹，所有静态数据都应该放到static目录中！
+5.footer.vue中<router-link></router-link>标签中的tag，代表可以通过配置tag属性生成别的标签。
+6.footer.vue中的购物车图标，应改为iconfont-gouwu。
