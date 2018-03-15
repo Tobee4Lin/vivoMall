@@ -95,7 +95,7 @@ export default {
     paid: function() {
       let paid = 0;
       for (let i in this.goodDetails) {
-          paid += this.goodDetails[i].price * this.goodDetails[i].value;
+        paid += this.goodDetails[i].price * this.goodDetails[i].value;
       }
       return paid;
     }
