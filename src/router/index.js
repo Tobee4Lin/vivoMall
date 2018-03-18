@@ -4,6 +4,9 @@ import Home from '@/components/Home'
 import goodDetail from '@/components/goodDetail'
 import carts from '@/components/carts'
 import information from '@/components/information'
+import my from '@/components/my'
+import choose from '@/components/choose'
+import parts from '@/components/parts'
 
 Vue.use(Router)
 
@@ -12,6 +15,9 @@ export default new Router({
     { path: '/', name: 'Home', component: Home },
     { path: '/goodDetail', name: 'goodDetail', component: goodDetail },
     { path: '/carts', name: 'carts', component: carts },
-    { path: '/information', name: 'information', component: information }
+    { path: '/information', name: 'information', component: information },
+    { path: '/my', name: 'my', component: my },
+    { path: '/choose', name: 'choose', component: choose },
+    { path: '/parts', name: 'parts', component: parts }
   ]
 })
