@@ -66,7 +66,6 @@ export default {
   height: 1.3rem;
   line-height: 1.3rem;
   font-size: 0.41rem;
-  padding-left: 0.3rem;
   background: white;
   top: 0;
   text-align: center;
@@ -77,6 +76,7 @@ export default {
   height: 50px;
   font-size: 0.71rem;
   color: black;
+  margin-left: 0.3rem;
 }
 .newsMain {
   margin-top: 0.1rem;
@@ -99,6 +99,10 @@ export default {
   line-height: 150%;
   font-family: 微软雅黑, sans-serif;
   margin-top: 0.3rem;
+}
+.newsBox p::first-letter {
+    font-size: 0.8rem;
+    margin-left: -1rem;
 }
 .newsBox img {
   width: 9.3rem;
