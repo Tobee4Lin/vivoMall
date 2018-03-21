@@ -7,6 +7,8 @@ import information from '@/components/information'
 import my from '@/components/my'
 import choose from '@/components/choose'
 import parts from '@/components/parts'
+import order from '@/components/order'
+import news from '@/components/news'
 
 Vue.use(Router)
 
@@ -18,6 +20,8 @@ export default new Router({
     { path: '/information', name: 'information', component: information },
     { path: '/my', name: 'my', component: my },
     { path: '/choose', name: 'choose', component: choose },
-    { path: '/parts', name: 'parts', component: parts }
+    { path: '/parts', name: 'parts', component: parts },
+    { path: '/order', name: 'order', component: order },
+    { path: '/news', name: 'news', component: news }
   ]
 })

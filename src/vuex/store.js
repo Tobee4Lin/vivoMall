@@ -7,17 +7,30 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
     state: {
         goodDetail: localStorage["goodDetail"] ? JSON.parse(localStorage["goodDetail"]) : [],
-        carts: localStorage["carts"] ? JSON.parse(localStorage["carts"]) : []
+        carts: localStorage["carts"] ? JSON.parse(localStorage["carts"]) : [],
+        orders: localStorage["orders"] ? JSON.parse(localStorage["orders"]) : []
     },
     mutations: {
         addCarts: (state, data) => {
             state.carts.push(data);
             localStorage.setItem("carts", JSON.stringify(state.carts));
         },
-        deleteItem: (state, index) => {
+        addOrder: (state, data) => {
+            state.orders.push(data);
+            localStorage.setItem("orders", JSON.stringify(state.orders));
+        },
+        //删除购物车商品
+        deleteCartItem: function(state, index) {
             MessageBox.confirm("确认要删除该商品吗？").then(next => {
                 state.carts.splice(index, 1);
                 localStorage.setItem("carts", JSON.stringify(state.carts));
+            }).catch(o => { })
+        },
+        //删除订单商品
+        deleteOrderItem: function(state, index) {
+            MessageBox.confirm("确认要删除该商品吗？").then(next => {
+                state.orders.splice(index, 1);
+                localStorage.setItem("orders", JSON.stringify(state.orders));
             }).catch(o => { })
         },
         reduce: (state, index) => {

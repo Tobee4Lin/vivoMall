@@ -165,7 +165,7 @@ export default {
         color: this.goodDetails[index].color,
         number: this.goodDetails[index].number
       };
-      this.$store.commit("addorder", data);
+      this.$store.commit("addOrder", data);
     },
     goBack() {
       this.$router.go(-1);

@@ -15,7 +15,7 @@
 
                   <div class="cartInformation">
                       <div class="cartName">{{cart.name}}
-                          <a href="javascript:;" class="iconfont icon-huishouzhan7" @click="deleteItem(index)" ></a>
+                          <a href="javascript:;" class="iconfont icon-huishouzhan7" @click="deleteCartItem(index)" ></a>
                       </div>
                       <p class="cartPrice">￥{{cart.price}}</p>
                   </div>
@@ -49,7 +49,7 @@
 </template>
 <script>
 import { Toast } from "mint-ui";
-import { mapState, mapMutations, mapGetters } from "vuex";
+import { mapMutations, mapGetters } from "vuex";
 
 export default {
   name: "carts",
@@ -63,7 +63,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(["deleteItem", "reduce", "add", "settlement"])
+    ...mapMutations(["deleteCartItem", "reduce", "add", "settlement"])
   }
 };
 </script>

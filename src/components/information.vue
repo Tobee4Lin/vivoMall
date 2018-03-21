@@ -11,7 +11,7 @@
                 <div class="informationImg">
                     <img :src="information.img" alt="图片">
                 </div>
-                <a href="">阅读全文</a>
+                <a href="" @click="open(information.id)">阅读全文</a>
               </li>
           </ul>
       </div>
